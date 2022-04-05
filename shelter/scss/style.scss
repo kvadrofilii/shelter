@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+// Variable
+@import './abstracts/variables';
+
+// Global styles
+@import './base/base';
+
+// Components styles
+@import './components/button', './components/pop-up';
+
+// Layouts styles
+@import './layouts/footer', './layouts/header', './layouts/main',
+  './layouts/section';
