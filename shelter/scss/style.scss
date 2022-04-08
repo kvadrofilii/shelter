@@ -1,17 +1,16 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 // Vendors
-@import './vendors/normalize';
+@import "./vendors/normalize";
 
 // Variable
-@import './abstracts/variables';
+@import "./abstract/constants", "./abstract/mixins", "./abstract/placeholders";
 
 // Global styles
-@import './base/base';
+@import "./base/base", "./base/button";
 
 // Components styles
-@import './components/button', './components/pop-up';
+@import "./components/pop-up";
 
 // Layouts styles
-@import './layouts/footer', './layouts/header', './layouts/main',
-  './layouts/section';
+@import "./layouts/footer", "./layouts/header", "./layouts/wrapper";
