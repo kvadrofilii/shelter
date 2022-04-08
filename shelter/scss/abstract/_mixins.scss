@@ -1,8 +1,8 @@
-@mixin font($size, $height: 130%, $size, $weight: 400, $style: normal) {
+@mixin font($size, $height: 130%, $weight: 400, $style: normal) {
   font-size: $size;
-  font-style: $style;
-  font-weight: $weight;
   line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
 }
 
 @mixin columns($width) {
