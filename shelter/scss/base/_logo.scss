@@ -1,0 +1,16 @@
+.logo {
+  @include flex($direction: column, $items: center);
+
+  &__title {
+    margin: 0;
+    color: $color-primary;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+  }
+}
