@@ -14,6 +14,13 @@
   }
 }
 
+@mixin flex($wrap: wrap, $content: flex-start, $items: flex-start) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $content;
+  align-items: $items;
+}
+
 @mixin media-laptop {
   @media (min-width: $content-width) {
     @content;
