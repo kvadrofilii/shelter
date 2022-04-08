@@ -12,13 +12,13 @@ $color-dark-xl: #4c4c4c;
 $color-dark-2xl: #444444;
 $color-dark-3xl: #444444;
 $start-screen-gradient-background: url(noise_lines_transparent@2X.png),
-	radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
-		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-	#211f20;
+  radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+  #211f20;
 $footer-gradient-background: url(noise_lines_transparent@2X.png),
-	radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%)
-		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-	#211f20;
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+  #211f20;
 
 $content-width: 1200px;
 $tablet-width: 768px;
