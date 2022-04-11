@@ -46,3 +46,11 @@ h4 {
 h5 {
   @include font($size: 1.5rem, $height: 110%);
 }
+
+.title_dark {
+  color: $color-dark-l;
+}
+
+.title_light {
+  color: $color-light-xl;
+}
