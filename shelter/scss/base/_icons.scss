@@ -1,0 +1,26 @@
+.ico {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &_arrow-prev,
+  &_arrow-next {
+    width: 14px;
+    height: 6px;
+  }
+
+  &_arrow-prev {
+    background-image: url("assets/icons/arrow.svg");
+  }
+
+  &_arrow-next {
+    background-image: url("assets/icons/arrow.svg");
+    transform: rotate(180deg);
+  }
+
+  &_closed {
+    width: 12px;
+    height: 12px;
+    background-image: url("assets/icons/closed.svg");
+  }
+}
