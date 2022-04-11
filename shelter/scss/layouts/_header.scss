@@ -1,0 +1,10 @@
+.page-header {
+  padding-top: 30px;
+  @include media-laptop {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    @include flex($content: space-between);
+  }
+}

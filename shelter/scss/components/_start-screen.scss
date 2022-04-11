@@ -1,0 +1,49 @@
+.start-screen {
+  background: $start-screen-gradient-background;
+
+  &__wrapper {
+    @include flex($direction: column, $content: space-between);
+    @include media-laptop {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    @include media-table {
+      width: 460px;
+    }
+
+    @include media-laptop {
+      margin-top: 163px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: $color-light-xl;
+
+    @include media-laptop {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin: 42px 0;
+    color: $color-dark-s;
+  }
+
+  &__image {
+    width: 260px;
+
+    @include media-table {
+      width: 569px;
+    }
+
+    @include media-laptop {
+      width: 698px;
+    }
+  }
+}
