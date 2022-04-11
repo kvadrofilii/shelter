@@ -9,13 +9,41 @@
     height: 6px;
   }
 
+  &_start,
+  &_finish {
+    width: 25px;
+    height: 23px;
+  }
+
+  &_prev,
+  &_next {
+    width: 10px;
+    height: 23px;
+  }
+
   &_arrow-prev {
-    background-image: url("assets/icons/arrow.svg");
+    background-image: url("assets/icons/slider/arrow.svg");
   }
 
   &_arrow-next {
-    background-image: url("assets/icons/arrow.svg");
+    background-image: url("assets/icons/slider/arrow.svg");
     transform: rotate(180deg);
+  }
+
+  &_start {
+    background-image: url("assets/icons/slider/start.svg");
+  }
+
+  &_finish {
+    background-image: url("assets/icons/slider/finish.svg");
+  }
+
+  &_prev {
+    background-image: url("assets/icons/slider/prev.svg");
+  }
+
+  &_next {
+    background-image: url("assets/icons/slider/next.svg");
   }
 
   &_closed {
