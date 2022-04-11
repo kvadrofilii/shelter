@@ -1,0 +1,17 @@
+.button {
+  padding: 15px 45px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  cursor: pointer;
+  color: $color-dark-3xl;
+  background-color: transparent;
+
+  &_colored {
+    background-color: $color-primary;
+  }
+
+  &:hover {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+  }
+}
