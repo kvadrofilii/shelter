@@ -1,0 +1,33 @@
+.nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    @include flex();
+    list-style: none;
+  }
+
+  &__item {
+    padding: 10px 10px 10px 35px;
+  }
+
+  &__item:first-child {
+    padding-left: 10px;
+  }
+
+  &__link {
+    @extend %font-prim;
+    @include font($size: 1.5rem, $height: 160%);
+    text-decoration: none;
+    color: $color-dark-s;
+
+    &:hover,
+    &_active {
+      color: $color-light-s;
+    }
+
+    &_active {
+      padding-bottom: 5px;
+      border-bottom: 3px solid $color-primary;
+    }
+  }
+}
