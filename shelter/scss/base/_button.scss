@@ -26,5 +26,13 @@
     padding: 0;
     @include flex($content: center, $items: center);
     flex-shrink: 0;
+    font-size: 2rem;
+    border-radius: 100px;
+    color: $color-dark-3xl;
+  }
+
+  &_disabled {
+    border: 2px solid $color-dark-s;
+    pointer-events: none;
   }
 }
