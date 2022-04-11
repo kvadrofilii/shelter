@@ -5,6 +5,6 @@
   }
 
   &__wrapper {
-    @include flex($content: space-between);
+    @include flex($content: space-between, $items: center);
   }
 }
