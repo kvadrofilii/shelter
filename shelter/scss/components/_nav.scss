@@ -30,5 +30,13 @@
       padding-bottom: 4px;
       border-bottom: 3px solid $color-primary;
     }
+
+    &.inner {
+      color: $color-dark-l;
+    }
+
+    &:hover.inner {
+      color: $color-dark-3xl;
+    }
   }
 }
