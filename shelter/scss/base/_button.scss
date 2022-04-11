@@ -6,9 +6,10 @@
   color: $color-dark-3xl;
   background-color: transparent;
   @extend %font-add;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   font-size: 1.7rem;
   line-height: 105%;
+  text-decoration: none;
 
   &_colored {
     background-color: $color-primary;
