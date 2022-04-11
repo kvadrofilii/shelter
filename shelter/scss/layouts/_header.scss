@@ -1,7 +1,18 @@
 .page-header {
   padding-top: 30px;
+
   @include media-laptop {
     padding: 60px 0;
+  }
+
+  &.inner {
+    background-color: $color-light-xl;
+    position: sticky;
+    top: 0;
+
+    @include media-laptop {
+      padding: 30px 0;
+    }
   }
 
   &__wrapper {
