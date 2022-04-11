@@ -14,4 +14,12 @@
     border: 2px solid $color-primary-light;
     background-color: $color-primary-light;
   }
+
+  &_circle {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    @include flex($content: center, $items: center);
+    flex-shrink: 0;
+  }
 }
