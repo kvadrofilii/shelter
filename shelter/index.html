@@ -14,23 +14,23 @@
 
     <header class="page-header">
       <div class="wrapper page-header__wrapper">
-        <div class="logo">
+        <a class="logo" href="index.html">
           <h1 class="logo__title">Cozy House</h1>
           <span class="logo__subtitle">Shelter for pets in Boston</span>
-        </div>
+        </a>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link nav__link_active" href="#">About the shelter</a>
+              <a class="nav__link nav__link_active" href="#about">About the shelter</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Our pets</a>
+              <a class="nav__link" href="our-pets.html">Our pets</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Help the shelter</a>
+              <a class="nav__link" href="#help">Help the shelter</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Contacts</a>
+              <a class="nav__link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -44,13 +44,13 @@
           We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will
           love you more than anybody else in the world, you will see!
         </p>
-        <button class="button button_colored">Make a friend</button>
+        <a class="button button_colored start-screen__button" href="#our-friends">Make a friend</a>
       </div>
       <img src="assets/images/start-screen-puppy.png" class="start-screen__image" alt="Not only people need a house">
     </div>
   </section>
 
-  <section class="about section">
+  <section class="about section" id="about">
     <div class="wrapper about__wrapper">
       <div class="about__container">
         <img src="assets/images/about-pets.png" class="about__image" alt="About the shelter “Cozy House">
@@ -72,7 +72,7 @@
     </div>
   </section>
 
-  <section class="our-friends section">
+  <section class="our-friends section" id="our-friends">
     <div class="wrapper our-friends__wrapper">
       <h3 class="title_dark our-friends__title">Our friends who<br>are looking for a house</h3>
 
@@ -110,11 +110,11 @@
         </button>
       </div>
 
-      <button class="button button_colored our-friends__button" href="pets/index.html">Get to know the rest</button>
+      <a class="button button_colored our-friends__button" href="our-pets.html">Get to know the rest</a>
     </div>
   </section>
 
-  <section class="help section">
+  <section class="help section" id="help">
     <div class="wrapper help__wrapper">
       <h3 class="title_dark help__title">How you can help<br>our shelter</h3>
 
@@ -192,18 +192,22 @@
     </div>
   </section>
 
-  <footer class="page-footer">
+  <footer class="page-footer" id="contacts">
     <div class="wrapper page-footer__wrapper">
       <article class="page-footer__content">
         <h3 class="title_light page-footer__title">For questions<br>and suggestions</h3>
         <ul class="page-footer__list">
           <li class="page-footer__item">
-            <div class="ico ico_email"></div>
-            <a class="page-footer__link" href="mailto:email@shelter.com">email@shelter.com</a>
+            <a class="page-footer__link" href="mailto:email@shelter.com">
+              <span class="ico ico_email"></span>
+              email@shelter.com
+            </a>
           </li>
           <li class="page-footer__item">
-            <div class="ico ico_phone"></div>
-            <a class="page-footer__link" href="tel:+136745677554">+13 674 567 75 54</a>
+            <a class="page-footer__link" href="tel:+136745677554">
+              <span class="ico ico_phone"></span>
+              +13 674 567 75 54
+            </a>
           </li>
         </ul>
       </article>
@@ -211,16 +215,18 @@
         <h3 class="title_light page-footer__title">We are waiting<br>for your visit</h3>
         <ul class="page-footer__list">
           <li class="page-footer__item page-footer__item_address">
-            <div class="ico ico_address"></div>
             <a class="page-footer__link"
-              href="https://www.google.ru/maps/place/1+Central+St,+Boston,+MA+02109,+США/@42.3585558,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263">1
-              Central Street, Boston<br>(entrance from the store)</a>
+              href="https://www.google.ru/maps/place/1+Central+St,+Boston,+MA+02109,+США/@42.3585558,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263">
+              <span class="ico ico_address"></span>
+              1 Central Street, Boston<br>(entrance from the store)
+            </a>
           </li>
           <li class="page-footer__item  page-footer__item_address">
-            <div class="ico ico_address"></div>
             <a class="page-footer__link"
-              href="https://www.google.ru/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+Великобритания/@51.4202718,-0.2023686,17z/data=!3m1!4b1!4m5!3m4!1s0x487608baa7401b31:0x18e66d9fcd2f7d77!8m2!3d51.4202685!4d-0.2001799">18
-              South Park, London</a>
+              href="https://www.google.ru/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+Великобритания/@51.4202718,-0.2023686,17z/data=!3m1!4b1!4m5!3m4!1s0x487608baa7401b31:0x18e66d9fcd2f7d77!8m2!3d51.4202685!4d-0.2001799">
+              <span class="ico ico_address"></span>
+              18 South Park, London
+            </a>
           </li>
         </ul>
       </article>
