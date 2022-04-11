@@ -1,0 +1,38 @@
+.help {
+  &__wrapper {
+    @include flex($direction: column, $items: center);
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0 87px;
+    //width: 1026px;
+    @include flex($content: center, $items: center, $wrap: wrap);
+  }
+
+  &__item {
+    @include flex($direction: column, $items: center);
+    margin-left: 120px;
+
+    &:first-child,
+    &:nth-child(6) {
+      margin-left: 0;
+    }
+
+    &:nth-child(-n + 5) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__name {
+    margin: 30px 0 0;
+    font-size: 2rem;
+    letter-spacing: 0.055em;
+    line-height: 105%;
+    color: $color-dark-l;
+  }
+}
