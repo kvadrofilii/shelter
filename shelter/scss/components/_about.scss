@@ -35,6 +35,11 @@
 
   &__title {
     margin: 0;
+    text-align: center;
+
+    @include media-tablet {
+      text-align: left;
+    }
   }
 
   &__text {
