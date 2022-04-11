@@ -1,0 +1,16 @@
+.our-friends {
+  background-color: $color-light-l;
+
+  &__wrapper {
+    @include flex($direction: column, $content: center, $items: center);
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: 60px;
+  }
+}
