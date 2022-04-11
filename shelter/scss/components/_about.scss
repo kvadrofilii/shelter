@@ -1,0 +1,44 @@
+.about {
+  background-color: $color-light-xl;
+
+  &__wrapper {
+    @include flex($content: center);
+  }
+
+  &__container {
+    @include flex($direction: column-reverse, $content: center, $items: center);
+
+    @include media-laptop {
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    @include media-tablet {
+      width: 430px;
+    }
+
+    @include media-laptop {
+      margin-left: 120px;
+    }
+  }
+
+  &__image {
+    width: 260px;
+
+    @include media-tablet {
+      width: 300px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 25px 0 0;
+    color: $color-dark-xl;
+  }
+}
