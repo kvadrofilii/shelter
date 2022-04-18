@@ -1,13 +1,48 @@
 .page-footer {
   background: $start-screen-gradient-background;
-  padding: 40px 0 0;
+  padding: 30px 0 0;
+
+  @include media-laptop {
+    padding: 40px 0 0;
+  }
 
   &__wrapper {
-    @include flex($content: space-between);
+    @include flex($content: center, $gap: 40px, $wrap: wrap);
+
+    @include media-tablet {
+      gap: 65px 40px;
+    }
+
+    @include media-laptop {
+      gap: 65px 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    @include media-tablet {
+      flex-basis: 300px;
+      padding: 0 15px;
+    }
+
+    @include media-tablet {
+      padding: 0;
+    }
   }
 
   &__title {
-    margin: 16px 0 0;
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+
+    @include media-tablet {
+      text-align: left;
+      padding: 0;
+    }
+
+    @include media-laptop {
+      margin: 16px 0 0;
+    }
   }
 
   &__list {
@@ -20,17 +55,29 @@
     margin: 40px 0 0;
 
     &_address {
-      margin-top: 32px;
+      margin: 38px 0 0;
+
+      @include media-tablet {
+        margin-top: 32px;
+      }
     }
   }
 
   &__link {
-    @include flex($items: center);
+    @include flex($items: center, $content: center);
     text-decoration: none;
     color: $color-primary;
     font-size: 2rem;
     letter-spacing: 0.06em;
     @extend %font-add;
+
+    @include media-tablet {
+      justify-content: flex-start;
+    }
+
+    &_address {
+      justify-content: flex-start;
+    }
   }
 
   &__image {

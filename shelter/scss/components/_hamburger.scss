@@ -1,0 +1,100 @@
+.hamburger {
+  display: block;
+
+  @include media-tablet {
+    display: none;
+  }
+
+  &__btn {
+    @include flex($items: center);
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 43px;
+    cursor: pointer;
+    z-index: 1;
+
+    @include media-tablet {
+      display: none;
+    }
+
+    & > span,
+    & > span::before,
+    & > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $color-primary;
+      transition-duration: 0.25s;
+    }
+
+    & > span::before {
+      content: "";
+      top: -10px;
+    }
+
+    & > span::after {
+      content: "";
+      top: 10px;
+    }
+
+    &.inner {
+      & > span,
+      & > span::before,
+      & > span::after {
+        background: $color-dark-3xl;
+      }
+    }
+  }
+
+  &__list {
+    @include flex($direction: column, $items: center);
+    position: fixed;
+    visibility: hidden;
+    top: 69px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px 0 0 0;
+    list-style: none;
+    background-color: $color-dark-3xl;
+    transition-duration: 0.25s;
+  }
+
+  &__list.hamburger__toggle {
+    visibility: visible;
+    left: 0;
+  }
+
+  &__item {
+    padding: 10px 0;
+  }
+
+  &__link {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-dark-s;
+
+    &:active {
+      color: $color-light-s;
+    }
+  }
+
+  &__btn.hamburger__toggle {
+    & > span {
+      transform: rotate(45deg);
+    }
+
+    & > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+
+    & > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+}

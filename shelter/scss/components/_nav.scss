@@ -1,9 +1,13 @@
 .nav {
   &__list {
+    display: none;
     margin: 0;
     padding: 0;
-    @include flex();
     list-style: none;
+
+    @include media-tablet {
+      @include flex();
+    }
   }
 
   &__item {

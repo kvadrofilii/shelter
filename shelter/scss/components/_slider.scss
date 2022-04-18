@@ -1,10 +1,19 @@
 .slider {
   width: 100%;
-  @include flex($content: space-between, $items: center);
+  //@include flex($direction: column, $content: space-between, $items: center);
+  @include flex($content: center, $items: center, $wrap: wrap, $gap: 20px 80px);
+
+  @include media-tablet {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  @include media-laptop {
+    gap: 53px;
+  }
 
   &__wrapper {
     width: 100%;
-    padding: 0 53px;
 
     &.inner {
       @include flex($direction: column, $items: center);
@@ -15,22 +24,46 @@
   &__list {
     width: 100%;
     @include flex($content: space-between, $items: center);
+    gap: 40px;
+
+    @include media-laptop {
+      gap: 90px;
+    }
 
     &.inner {
       flex-wrap: wrap;
+      gap: 30px;
+
+      @include media-tablet {
+        justify-content: center;
+        gap: 30px 40px;
+      }
     }
   }
 
   &__card {
     width: 270px;
     height: 435px;
+    margin: 0 auto;
     background-color: $color-light-s;
     border-radius: 9px;
     @include flex($direction: column, $items: center);
     cursor: pointer;
 
-    &:first-child {
-      margin-left: 0;
+    &:nth-child(n + 2) {
+      display: none;
+    }
+
+    @include media-tablet {
+      &:nth-child(2) {
+        display: flex;
+      }
+    }
+
+    @include media-laptop {
+      &:nth-child(3) {
+        display: flex;
+      }
     }
 
     &:hover {
@@ -44,7 +77,22 @@
     }
 
     &.inner {
-      margin: 15px 0;
+      &:nth-child(-n + 3) {
+        display: flex;
+      }
+
+      @include media-tablet {
+        margin: 0;
+        &:nth-child(-n + 6) {
+          display: flex;
+        }
+      }
+
+      @include media-laptop {
+        &:nth-child(n + 6) {
+          display: flex;
+        }
+      }
     }
   }
 
@@ -58,9 +106,42 @@
     color: $color-dark-l;
   }
 
+  &__prev {
+    order: 1;
+
+    @include media-tablet {
+      order: 0;
+    }
+
+    &.inner {
+      order: 0;
+    }
+  }
+
+  &__next {
+    order: 1;
+
+    @include media-tablet {
+      order: 0;
+    }
+
+    &.inner {
+      order: 0;
+    }
+  }
+
   &__control {
-    width: 340px;
-    margin-top: 45px;
+    width: 300px;
+    margin-top: 42px;
     @include flex($content: space-between, $items: center);
+
+    @include media-tablet {
+      width: 340px;
+      margin-top: 40px;
+    }
+
+    @include media-laptop {
+      margin-top: 60px;
+    }
   }
 }

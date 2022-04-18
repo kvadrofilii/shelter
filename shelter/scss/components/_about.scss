@@ -7,9 +7,15 @@
 
   &__container {
     @include flex($direction: column-reverse, $content: center, $items: center);
+    gap: 42px;
+
+    @include media-tablet {
+      gap: 80px;
+    }
 
     @include media-laptop {
       flex-direction: row;
+      gap: 120px;
     }
   }
 
@@ -18,10 +24,6 @@
 
     @include media-tablet {
       width: 430px;
-    }
-
-    @include media-laptop {
-      margin-left: 120px;
     }
   }
 
@@ -43,7 +45,15 @@
   }
 
   &__text {
-    margin: 25px 0 0;
+    margin: 22px 0 0;
+    padding: 0 15px;
     color: $color-dark-xl;
+    text-align: justify;
+
+    @include media-tablet {
+      text-align: left;
+      padding: 0;
+      margin: 25px 0 0;
+    }
   }
 }
