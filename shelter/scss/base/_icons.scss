@@ -53,8 +53,13 @@
   }
 
   &_help {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+
+    @include media-tablet {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &_pet-food {
