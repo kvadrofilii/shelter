@@ -35,4 +35,9 @@
     border: 2px solid $color-dark-s;
     pointer-events: none;
   }
+
+  &_disabled-colored {
+    border: 2px solid $color-primary;
+    pointer-events: none;
+  }
 }
