@@ -1,0 +1,66 @@
+.modal {
+  width: 900px;
+  padding-right: 20px;
+  border-radius: 9px;
+  background-color: $color-light-s;
+  @extend %shadow;
+  position: relative;
+  color: $color-dark-4xl;
+  @extend %font-add;
+  letter-spacing: 0.06em;
+  display: none;
+
+  &__container {
+    @include flex($gap: 30px);
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &__button {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+  }
+
+  &__image {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0 0 9px;
+  }
+
+  &__content {
+    margin-top: 50px;
+  }
+
+  &__title {
+    @include font($size: 3.5rem);
+    margin: 0;
+  }
+
+  &__subtitle {
+    margin: 10px 0 0;
+    @include font($size: 2rem, $height: 115%);
+  }
+
+  &__text {
+    margin: 40px 0;
+    @include font($size: 1.5rem, $height: 110%);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0 0 0 14px;
+  }
+
+  &__item {
+    margin: 0;
+    padding-bottom: 10px;
+    line-height: 110%;
+
+    &::marker {
+      color: $color-primary;
+    }
+  }
+}
