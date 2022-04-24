@@ -9,6 +9,7 @@
   @extend %font-add;
   letter-spacing: 0.06em;
   display: none;
+  cursor: auto;
 
   &__container {
     @include flex($gap: 30px);
@@ -62,5 +63,10 @@
     &::marker {
       color: $color-primary;
     }
+  }
+
+  &:hover .modal__button.button_circle {
+    border: 2px solid $color-primary-light;
+    background-color: transparent;
   }
 }

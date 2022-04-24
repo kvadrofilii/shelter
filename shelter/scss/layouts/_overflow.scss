@@ -6,8 +6,14 @@
   left: 0;
   background: $color-overflow;
   display: none;
+  cursor: pointer;
 
   &.show {
     @include flex($content: center, $items: center);
+  }
+
+  &:hover .modal__button {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
   }
 }

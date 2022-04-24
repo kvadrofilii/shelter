@@ -7,12 +7,12 @@
 @import "./abstract/constants", "./abstract/mixins", "./abstract/placeholders";
 
 // Global styles
-@import "./base/base", "./base/logo", "./base/button", "./base/icons";
+@import "./base/base", "./base/logo", "./base/button", "./base/icons", "./base/animations";
 
 // Components styles
 @import "./components/pop-up", "./components/nav", "./components/start-screen", "./components/about",
 	"./components/our-friends", "./components/slider", "./components/help", "./components/in-addition",
-	"./components/hamburger";
+	"./components/hamburger", "./components/modal";
 
 // Layouts styles
-@import "./layouts/footer", "./layouts/header", "./layouts/wrapper", "./layouts/section";
+@import "./layouts/footer", "./layouts/header", "./layouts/wrapper", "./layouts/section", "./layouts/overflow";
