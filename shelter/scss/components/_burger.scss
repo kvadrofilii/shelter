@@ -58,6 +58,10 @@
     right: -100%;
     background-color: $color-dark-3xl;
     @extend %transition;
+
+    &.inner {
+      background-color: $color-light-xl;
+    }
   }
 
   &__content.burger__toggle {
@@ -99,6 +103,14 @@
     &_active {
       padding-bottom: 4px;
       border-bottom: 3px solid $color-primary;
+    }
+
+    &.inner {
+      color: $color-dark-l;
+    }
+
+    &:hover.inner {
+      color: $color-dark-3xl;
     }
   }
 }
