@@ -8,14 +8,14 @@ const CARD_VALUE = pets.length,
   // Массив для генерации псевдослучайной последовательности карточек слайдера
   ARR_ALL_CARD = addNumberForArray(CARD_VALUE),
   // Получаю узел слайдера на главной странице
-  SLIDER_MAIN = document.querySelector('#slider-main'),
+  SLIDER = document.querySelector('.slider'),
   // Получаю узлы со слайдера на главной странице
-  CAROUSEL = SLIDER_MAIN.querySelector('.slider__carousel'),
-  MAIN_BTN_LEFT = SLIDER_MAIN.querySelector('.slider__prev'),
-  MAIN_BTN_RIGHT = SLIDER_MAIN.querySelector('.slider__next'),
-  ITEM_ACTIVE = SLIDER_MAIN.querySelector('#item-active'),
-  ITEM_LEFT = SLIDER_MAIN.querySelector('#item-left'),
-  ITEM_RIGHT = SLIDER_MAIN.querySelector('#item-right'),
+  CAROUSEL = SLIDER.querySelector('.slider__carousel'),
+  BTN_LEFT = SLIDER.querySelector('.slider__prev'),
+  BTN_RIGHT = SLIDER.querySelector('.slider__next'),
+  ITEM_ACTIVE = SLIDER.querySelector('#item-active'),
+  ITEM_LEFT = SLIDER.querySelector('#item-left'),
+  ITEM_RIGHT = SLIDER.querySelector('#item-right'),
   // Получаю узел затемнения модального окна
   MODAL_OVERFLOW = document.querySelector('#modal-overflow'),
   // Получаю узел модального окна
@@ -24,14 +24,14 @@ const CARD_VALUE = pets.length,
   MODAL_CLOSE_BTN = MODAL.querySelector('.modal__button');
 
 // Переменная для количества отображаемых карточек на экране
-let mediaNum = 0;
+let maxCards = 0;
 // Получаю количество карточек в зависимости от размера экрана
 getMediaNum();
 
-// Генерирую псевдослучайные числа и сохраняю первые n-чисел равное mediaNum
-let arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, mediaNum),
+// Генерирую псевдослучайные числа и сохраняю первые n-чисел равное maxCards
+let arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, maxCards),
   // Создаю новый массив без чисел с главного экрана
-  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, mediaNum);
+  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, maxCards);
 
 
 console.log('Текущий массив: ', arrActiveCard);
@@ -48,7 +48,7 @@ const outputSliderCard = (value, arrayIndex, parentSelector) => {
     ).render();
   }
 }
-outputSliderCard(mediaNum, arrActiveCard, '#item-active')
+outputSliderCard(maxCards, arrActiveCard, '#item-active')
 
 // Слушаю изменение размера окна
 const resize = () => {
@@ -56,12 +56,12 @@ const resize = () => {
   getMediaNum();
   // Очищаю слайдер
   ITEM_ACTIVE.innerHTML = '';
-  // Генерирую псевдослучайные числа и сохраняю первые n-чисел равное mediaNum
-  arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, mediaNum);
+  // Генерирую псевдослучайные числа и сохраняю первые n-чисел равное maxCards
+  arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, maxCards);
   // Создаю новый массив без чисел с главного экрана
-  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, mediaNum);
+  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, maxCards);
   // Вывожу карточки в слайдере
-  outputSliderCard(mediaNum, arrActiveCard, '#item-active')
+  outputSliderCard(maxCards, arrActiveCard, '#item-active')
 
   console.log('Текущий массив: ', arrActiveCard);
   console.log('Новый массив: ', arrNextCard);
@@ -84,7 +84,7 @@ const openModal = (src, title, subtitle, text, age, inoculations, diseases, para
 }
 
 // Слушаю нажатие на карточки слайдера и открываю модальное окно с динамическим наполнением
-SLIDER_MAIN.addEventListener('click', e => {
+SLIDER.addEventListener('click', e => {
   // Получаю нажатую карточку
   const card = e.target.closest('.slider__card');
   // Если нажали мимо карточки, то прерываю функцию
@@ -148,10 +148,10 @@ function addNumberForArray(value) {
 
 // Перемешиваю массив чисел
 function shuffle(array) {
-  const result = array
-  for (let i = array.length - 1; i > 0; i--) {
+  const result = [...array]
+  for (let i = result.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [result[i], result[j]] = [result[j], result[i]];
   }
   return result;
 }
@@ -166,20 +166,20 @@ function filterArray(arrayAllCard, arrayActiveCard) {
 
 const moveLeft = () => {
   CAROUSEL.classList.add('transition-left');
-  MAIN_BTN_LEFT.removeEventListener('click', moveLeft);
-  MAIN_BTN_RIGHT.removeEventListener('click', moveRight);
-  outputSliderCard(mediaNum, arrNextCard, '#item-left')
+  BTN_LEFT.removeEventListener('click', moveLeft);
+  BTN_RIGHT.removeEventListener('click', moveRight);
+  outputSliderCard(maxCards, arrNextCard, '#item-left')
 };
 
 const moveRight = () => {
   CAROUSEL.classList.add('transition-right');
-  MAIN_BTN_LEFT.removeEventListener('click', moveLeft);
-  MAIN_BTN_RIGHT.removeEventListener('click', moveRight);
-  outputSliderCard(mediaNum, arrNextCard, '#item-right')
+  BTN_LEFT.removeEventListener('click', moveLeft);
+  BTN_RIGHT.removeEventListener('click', moveRight);
+  outputSliderCard(maxCards, arrNextCard, '#item-right')
 };
 
-MAIN_BTN_LEFT.addEventListener('click', moveLeft);
-MAIN_BTN_RIGHT.addEventListener('click', moveRight);
+BTN_LEFT.addEventListener('click', moveLeft);
+BTN_RIGHT.addEventListener('click', moveRight);
 
 CAROUSEL.addEventListener('animationend', (animationEvent) => {
   let changedItem;
@@ -193,25 +193,25 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
     ITEM_ACTIVE.innerHTML = ITEM_RIGHT.innerHTML;
   }
   arrActiveCard = [...arrNextCard];
-  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, mediaNum);
+  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, maxCards);
 
   console.log('Текущий массив: ', arrActiveCard);
   console.log('Новый массив: ', arrNextCard);
 
   changedItem.innerHTML = '';
 
-  MAIN_BTN_LEFT.addEventListener('click', moveLeft);
-  MAIN_BTN_RIGHT.addEventListener('click', moveRight);
+  BTN_LEFT.addEventListener('click', moveLeft);
+  BTN_RIGHT.addEventListener('click', moveRight);
 })
 
 // Получаю количество карточек в зависимости от размера экрана
 function getMediaNum() {
   if (document.documentElement.clientWidth < 768) {
-    mediaNum = 1;
+    maxCards = 1;
   } else if (document.documentElement.clientWidth >= 768 &&
     document.documentElement.clientWidth < 1280) {
-    mediaNum = 2;
+    maxCards = 2;
   } else if (document.documentElement.clientWidth >= 1280) {
-    mediaNum = 3;
+    maxCards = 3;
   }
 }
