@@ -24,17 +24,18 @@ const CARD_VALUE = pets.length,
   MODAL_CLOSE_BTN = MODAL.querySelector('.modal__button');
 
 // Переменная для количества отображаемых карточек на экране
-let mediaNum = 3,
-  // Генерирую псевдослучайные числа и сохраняю первые 3
-  arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, mediaNum),
+let mediaNum = 0;
+// Получаю количество карточек в зависимости от размера экрана
+getMediaNum();
+
+// Генерирую псевдослучайные числа и сохраняю первые n-чисел равное mediaNum
+let arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, mediaNum),
   // Создаю новый массив без чисел с главного экрана
   arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, mediaNum);
 
 
 console.log('Текущий массив: ', arrActiveCard);
 console.log('Новый массив: ', arrNextCard);
-
-
 
 // Вывожу карточки в слайдере
 const outputSliderCard = (value, arrayIndex, parentSelector) => {
@@ -47,9 +48,25 @@ const outputSliderCard = (value, arrayIndex, parentSelector) => {
     ).render();
   }
 }
-
 outputSliderCard(mediaNum, arrActiveCard, '#item-active')
 
+// Слушаю изменение размера окна
+const resize = () => {
+  // Получаю количество карточек в зависимости от размера экрана
+  getMediaNum();
+  // Очищаю слайдер
+  ITEM_ACTIVE.innerHTML = '';
+  // Генерирую псевдослучайные числа и сохраняю первые n-чисел равное mediaNum
+  arrActiveCard = shuffle(ARR_ALL_CARD).slice(0, mediaNum);
+  // Создаю новый массив без чисел с главного экрана
+  arrNextCard = shuffle(filterArray(ARR_ALL_CARD, arrActiveCard)).slice(0, mediaNum);
+  // Вывожу карточки в слайдере
+  outputSliderCard(mediaNum, arrActiveCard, '#item-active')
+
+  console.log('Текущий массив: ', arrActiveCard);
+  console.log('Новый массив: ', arrNextCard);
+}
+window.addEventListener('resize', resize);
 
 
 // Открытие модально окна
@@ -186,3 +203,15 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
   MAIN_BTN_LEFT.addEventListener('click', moveLeft);
   MAIN_BTN_RIGHT.addEventListener('click', moveRight);
 })
+
+// Получаю количество карточек в зависимости от размера экрана
+function getMediaNum() {
+  if (document.documentElement.clientWidth < 768) {
+    mediaNum = 1;
+  } else if (document.documentElement.clientWidth >= 768 &&
+    document.documentElement.clientWidth < 1280) {
+    mediaNum = 2;
+  } else if (document.documentElement.clientWidth >= 1280) {
+    mediaNum = 3;
+  }
+}
