@@ -1,0 +1,27 @@
+.logo {
+  @include flex($direction: column, $items: center);
+  text-decoration: none;
+  position: relative;
+  z-index: 60;
+
+  &__title {
+    margin: 0;
+    color: $color-primary;
+
+    &.inner {
+      color: $color-dark-l;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+
+    &.inner {
+      color: $color-dark-l;
+    }
+  }
+}

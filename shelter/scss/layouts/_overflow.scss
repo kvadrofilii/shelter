@@ -1,0 +1,23 @@
+.overflow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: $color-overflow;
+  display: none;
+  cursor: pointer;
+  @extend %transition;
+
+  &.show {
+    @include flex($content: center, $items: center);
+  }
+
+  &:hover .modal__button {
+    background-color: $color-primary-light;
+  }
+}
+
+#modal-overflow {
+  z-index: 66;
+}

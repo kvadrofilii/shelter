@@ -1,0 +1,139 @@
+.slider {
+  width: 100%;
+  @include flex($content: center, $items: center, $wrap: wrap, $gap: 0 80px);
+
+  @include media-tablet {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  @include media-laptop {
+    gap: 13px;
+  }
+
+  &.inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    overflow: hidden;
+
+    &.inner {
+      @include flex($direction: column, $items: center);
+      padding: 0;
+    }
+  }
+
+  &__carousel {
+    width: 100%;
+    position: relative;
+    @include flex($items: center);
+    left: -100%;
+  }
+
+  &__item {
+    width: 100%;
+    min-height: 435px;
+    padding: 20px;
+    @include flex($content: center, $items: center);
+    gap: 0 40px;
+    flex-shrink: 0;
+
+    @include media-tablet {
+      height: 1365px;
+    }
+
+    @include media-laptop {
+      height: 980px;
+      gap: 90px;
+      padding: 40px;
+    }
+
+    &.inner {
+      padding: 0;
+      @include grid($columns: 270px, $rows: 435px);
+      gap: 30px;
+
+      @include media-tablet {
+        grid-template-columns: 270px 270px;
+        gap: 30px 40px;
+      }
+
+      @include media-laptop {
+        grid-template-columns: 270px 270px 270px 270px;
+        padding: 40px;
+      }
+    }
+  }
+
+  &__card {
+    width: 270px;
+    height: 435px;
+    margin: 0 auto;
+    background-color: $color-light-s;
+    border-radius: 9px;
+    @include flex($direction: column, $items: center);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-light-xl;
+      @extend %shadow;
+    }
+
+    &:hover .slider__button {
+      border: 2px solid $color-primary-light;
+      background-color: $color-primary-light;
+    }
+  }
+
+  &__image {
+    border-radius: 9px 9px 0 0;
+  }
+
+  &__name {
+    text-align: center;
+    margin: 30px 0;
+    color: $color-dark-l;
+  }
+
+  &__prev {
+    order: 1;
+
+    @include media-tablet {
+      order: 0;
+    }
+
+    &.inner {
+      order: 0;
+    }
+  }
+
+  &__next {
+    order: 1;
+
+    @include media-tablet {
+      order: 0;
+    }
+
+    &.inner {
+      order: 0;
+    }
+  }
+
+  &__control {
+    width: 300px;
+    margin-top: 42px;
+    @include flex($content: space-between, $items: center);
+
+    @include media-tablet {
+      width: 340px;
+      margin-top: 40px;
+    }
+
+    @include media-laptop {
+      margin-top: 20px;
+    }
+  }
+}

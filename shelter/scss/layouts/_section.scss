@@ -1,0 +1,7 @@
+.section {
+  padding: 42px 0;
+
+  @include media-tablet {
+    padding: 80px 0 100px;
+  }
+}

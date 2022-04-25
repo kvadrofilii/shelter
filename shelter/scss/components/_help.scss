@@ -1,0 +1,48 @@
+.help {
+  &__wrapper {
+    @include flex($direction: column, $items: center);
+  }
+
+  &__title {
+    margin: 0 0 42px;
+    text-align: center;
+
+    @include media-tablet {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__list {
+    @include grid($columns: 1fr 1fr, $gap: 30px);
+
+    @include media-tablet {
+      @include grid($columns: 1fr 1fr 1fr, $gap: 55px 62px);
+    }
+
+    @include media-laptop {
+      @include flex($content: center, $items: center, $wrap: wrap);
+      gap: 55px 120px;
+    }
+  }
+
+  &__item {
+    @include flex($direction: column, $items: center);
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    margin: 20px 0 0;
+    letter-spacing: 0.06em;
+    line-height: 110%;
+    color: $color-dark-l;
+
+    @include media-tablet {
+      font-size: 2rem;
+      margin: 30px 0 0;
+    }
+
+    @include media-laptop {
+      letter-spacing: 0.055em;
+    }
+  }
+}

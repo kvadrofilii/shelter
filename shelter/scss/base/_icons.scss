@@ -1,0 +1,129 @@
+.ico {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &_arrow-prev,
+  &_arrow-next {
+    width: 14px;
+    height: 6px;
+  }
+
+  &_start,
+  &_finish {
+    width: 25px;
+    height: 23px;
+  }
+
+  &_prev,
+  &_next {
+    width: 10px;
+    height: 23px;
+  }
+
+  &_arrow-prev {
+    background-image: url("assets/icons/slider/arrow.svg");
+  }
+
+  &_arrow-next {
+    background-image: url("assets/icons/slider/arrow.svg");
+    transform: rotate(180deg);
+  }
+
+  &_start {
+    background-image: url("assets/icons/slider/start.svg");
+  }
+
+  &_finish {
+    background-image: url("assets/icons/slider/finish.svg");
+  }
+
+  &_prev {
+    background-image: url("assets/icons/slider/prev.svg");
+  }
+
+  &_next {
+    background-image: url("assets/icons/slider/next.svg");
+  }
+
+  &_closed {
+    width: 12px;
+    height: 12px;
+    background-image: url("assets/icons/closed.svg");
+  }
+
+  &_help {
+    width: 50px;
+    height: 50px;
+
+    @include media-tablet {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &_pet-food {
+    background-image: url("assets/icons/help/pet-food.svg");
+  }
+
+  &_transportation {
+    background-image: url("assets/icons/help/transportation.svg");
+  }
+
+  &_toys {
+    background-image: url("assets/icons/help/toys.svg");
+  }
+
+  &_bowls-and-cups {
+    background-image: url("assets/icons/help/bowls-and-cups.svg");
+  }
+
+  &_shampoos {
+    background-image: url("assets/icons/help/shampoos.svg");
+  }
+
+  &_vitamins {
+    background-image: url("assets/icons/help/vitamins.svg");
+  }
+
+  &_medicines {
+    background-image: url("assets/icons/help/medicines.svg");
+  }
+
+  &_collars-leashes {
+    background-image: url("assets/icons/help/collars-leashes.svg");
+  }
+
+  &_sleeping-areas {
+    background-image: url("assets/icons/help/sleeping-area.svg");
+  }
+
+  &_credit-card {
+    width: 30px;
+    height: 23px;
+    margin: 0 15px;
+    background-image: url("assets/icons/credit-card.svg");
+  }
+
+  &_email,
+  &_phone {
+    width: 40px;
+    height: 32px;
+    margin-right: 20px;
+  }
+
+  &_email {
+    background-image: url("assets/icons/footer/email.svg");
+  }
+
+  &_phone {
+    background-image: url("assets/icons/footer/phone.svg");
+  }
+
+  &_address {
+    width: 22px;
+    height: 32px;
+    margin-right: 20px;
+    background-image: url("assets/icons/footer/address.svg");
+  }
+}

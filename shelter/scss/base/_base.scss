@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: $mobile-small-width;
+  @extend %font-prim;
+  @include font($size: 1.5rem, $height: 160%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @extend %font-add;
+  letter-spacing: 0.06em;
+}
+
+h1 {
+  @include font($size: 3.2rem, $height: 110%);
+}
+
+h2 {
+  @include font($size: 2.5rem);
+  @include media-tablet {
+    @include font($size: 4.4rem);
+    letter-spacing: normal;
+  }
+}
+
+h3 {
+  @include font($size: 2.5rem);
+  @include media-tablet {
+    @include font($size: 3.5rem);
+  }
+}
+
+h4 {
+  @include font($size: 2rem, $height: 115%);
+}
+
+h5 {
+  @include font($size: 1.5rem, $height: 110%);
+}
+
+.title_dark {
+  color: $color-dark-l;
+}
+
+.title_light {
+  color: $color-light-xl;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,51 @@
+.button {
+  padding: 15px 45px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  cursor: pointer;
+  color: $color-dark-3xl;
+  background-color: transparent;
+  @extend %font-add;
+  letter-spacing: 0.05em;
+  font-size: 1.7rem;
+  line-height: 105%;
+  text-decoration: none;
+
+  &_colored {
+    background-color: $color-primary;
+  }
+
+  &:hover {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+  }
+
+  &:focus {
+    background-color: transparent;
+  }
+
+  &_circle {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    @include flex($content: center, $items: center);
+    flex-shrink: 0;
+    font-size: 2rem;
+    border-radius: 100px;
+    color: $color-dark-3xl;
+  }
+
+  &_disabled {
+    border: 2px solid $color-dark-s;
+    pointer-events: none;
+
+    &:focus {
+      border: 2px solid $color-dark-s;
+    }
+  }
+
+  &_disabled-colored {
+    border: 2px solid $color-primary;
+    pointer-events: none;
+  }
+}

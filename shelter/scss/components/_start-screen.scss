@@ -1,0 +1,75 @@
+.start-screen {
+  background: $start-screen-gradient-background;
+
+  &__wrapper {
+    @include flex($direction: column, $content: space-between, $items: center);
+    gap: 105px;
+
+    @include media-tablet {
+      gap: 100px;
+    }
+
+    @include media-laptop {
+      gap: 40px;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    @include media-tablet {
+      width: 460px;
+    }
+
+    @include media-laptop {
+      margin-top: 163px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: $color-light-xl;
+
+    @include media-tablet {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin: 42px 0;
+    color: $color-dark-s;
+    text-align: center;
+
+    @include media-tablet {
+      text-align: left;
+    }
+  }
+
+  &__image {
+    width: 260px;
+    align-self: flex-end;
+
+    @include media-tablet {
+      width: 569px;
+    }
+
+    @include media-laptop {
+      width: 698px;
+    }
+  }
+
+  &__button-wrapper {
+    @include flex($content: center);
+
+    @include media-laptop {
+      justify-content: flex-start;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+  }
+}

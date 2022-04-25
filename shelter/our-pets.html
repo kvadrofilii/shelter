@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our pets | Cozy House</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="page-header inner">
+    <div class="overflow" id="nav-overflow"></div>
+    <div class="wrapper page-header__wrapper">
+      <a class="logo logo_inner" href="index.html">
+        <h1 class="logo__title inner">Cozy House</h1>
+        <span class="logo__subtitle inner">Shelter for pets in Boston</span>
+      </a>
+      <nav class="nav">
+        <div class="burger">
+          <div class="burger__btn inner"><span></span></div>
+
+          <div class="burger__content inner">
+            <ul class="burger__list">
+              <li class="burger__item">
+                <a class="burger__link inner" href="index.html#about">About the shelter</a>
+              </li>
+              <li class="burger__item">
+                <a class="burger__link burger__link_active inner" href="our-pets.html">Our pets</a>
+              </li>
+              <li class="burger__item">
+                <a class="burger__link inner" href="index.html#help">Help the shelter</a>
+              </li>
+              <li class="burger__item">
+                <a class="burger__link inner" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link inner" href="index.html">About the shelter</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link_active inner" href="our-pets.html">Our pets</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link inner" href="index.html#help">Help the shelter</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link inner" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section our-friends inner">
+    <div class="wrapper our-friends__wrapper">
+
+      <h3 class="title_dark our-friends__title inner">Our friends who<br>are looking for a house</h3>
+
+      <div class="slider inner">
+        <div class="slider__wrapper inner">
+          <div class="slider__carousel inner">
+            <div class="slider__item inner" id="item-left"></div>
+            <div class="slider__item inner" id="item-active"></div>
+            <div class="slider__item inner" id="item-right"></div>
+          </div>
+        </div>
+
+        <div class="slider__control">
+          <button class="slider__start button button_circle button_disabled inner">
+            <span class="ico ico_start"></span>
+          </button>
+          <button class="slider__prev button button_circle button_disabled inner">
+            <span class="ico ico_prev"></span>
+          </button>
+          <button class="button button_colored button_circle  button_disabled-colored inner" id="page-number">
+          </button>
+          <button class="slider__next button button_circle inner">
+            <span class="ico ico_next"></span>
+          </button>
+          <button class="slider__finish button button_circle inner">
+            <span class="ico ico_finish"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="page-footer" id="contacts">
+    <div class="wrapper page-footer__wrapper">
+      <article class="page-footer__content">
+        <h3 class="title_light page-footer__title">For questions and suggestions</h3>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="mailto:email@shelter.com">
+              <span class="ico ico_email"></span>
+              email@shelter.com
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="tel:+136745677554">
+              <span class="ico ico_phone"></span>
+              +13 674 567 75 54
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article class="page-footer__content">
+        <h3 class="title_light page-footer__title">We are waiting for your visit</h3>
+        <ul class="page-footer__list">
+          <li class="page-footer__item page-footer__item_address">
+            <a class="page-footer__link page-footer__link_address"
+              href="https://www.google.ru/maps/place/1+Central+St,+Boston,+MA+02109,+США/@42.3585558,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263"
+              rel='nofollow noopener noreferrer' target='_blank'>
+              <span class="ico ico_address"></span>
+              1 Central Street, Boston<br>(entrance from the store)
+            </a>
+          </li>
+          <li class="page-footer__item page-footer__item_address">
+            <a class="page-footer__link page-footer__link_address"
+              href="https://www.google.ru/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+Великобритания/@51.4202718,-0.2023686,17z/data=!3m1!4b1!4m5!3m4!1s0x487608baa7401b31:0x18e66d9fcd2f7d77!8m2!3d51.4202685!4d-0.2001799"
+              rel='nofollow noopener noreferrer' target='_blank'>
+              <span class="ico ico_address"></span>
+              18 South Park, London
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article class="page-footer__content">
+        <h3 class="page-footer__title visually-hidden">Cute puppy pulls paw</h3>
+        <img class="page-footer__image" src="assets/images/footer-puppy.png" alt="Cute puppy pulls paw">
+      </article>
+    </div>
+  </footer>
+
+  <div class="overflow" id="modal-overflow">
+    <div class="modal">
+      <button class="modal__button button button_circle" id="modal__button">
+        <span class="ico ico_closed"></span>
+      </button>
+      <div class="modal__container"></div>
+    </div>
+  </div>
+
+  <script src="js/burger.js"></script>
+  <script src="js/data.js" type="module"></script>
+  <script src="js/classes.js" type="module"></script>
+  <script src="js/pagination.js" type="module"></script>
+</body>
+
+</html>
