@@ -20,6 +20,10 @@
     background-color: $color-primary-light;
   }
 
+  &:focus {
+    background-color: transparent;
+  }
+
   &_circle {
     width: 52px;
     height: 52px;
@@ -34,6 +38,10 @@
   &_disabled {
     border: 2px solid $color-dark-s;
     pointer-events: none;
+
+    &:focus {
+      border: 2px solid $color-dark-s;
+    }
   }
 
   &_disabled-colored {
