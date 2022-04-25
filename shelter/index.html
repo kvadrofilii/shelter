@@ -14,14 +14,33 @@
   <section class="start-screen">
 
     <header class="page-header">
+      <div class="overflow" id="nav-overflow"></div>
       <div class="wrapper page-header__wrapper">
         <a class="logo" href="index.html">
           <h1 class="logo__title">Cozy House</h1>
           <span class="logo__subtitle">Shelter for pets in Boston</span>
         </a>
+
         <nav class="nav">
-          <div class="hamburger">
-            <div class="hamburger__btn"><span></span></div>
+          <div class="burger">
+            <div class="burger__btn"><span></span></div>
+
+            <div class="burger__content">
+              <ul class="burger__list">
+                <li class="burger__item">
+                  <a class="burger__link burger__link_active" href="#about">About the shelter</a>
+                </li>
+                <li class="burger__item">
+                  <a class="burger__link" href="our-pets.html">Our pets</a>
+                </li>
+                <li class="burger__item">
+                  <a class="burger__link" href="#help">Help the shelter</a>
+                </li>
+                <li class="burger__item">
+                  <a class="burger__link" href="#contacts">Contacts</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <ul class="nav__list">
@@ -239,6 +258,7 @@
       <div class="modal__container"></div>
     </div>
   </div>
+  <script src="js/burger.js"></script>
   <script src="js/data.js" type="module"></script>
   <script src="js/classes.js" type="module"></script>
   <script src="js/slider.js" type="module"></script>

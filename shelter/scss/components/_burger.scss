@@ -1,4 +1,4 @@
-.hamburger {
+.burger {
   display: block;
 
   @include media-tablet {
@@ -6,11 +6,11 @@
   }
 
   &__btn {
-    @include flex($items: center);
-    position: relative;
     width: 30px;
     height: 30px;
     margin-right: 43px;
+    @include flex($items: center);
+    position: relative;
     cursor: pointer;
     z-index: 1;
 
@@ -48,53 +48,57 @@
     }
   }
 
-  &__list {
-    @include flex($direction: column, $items: center);
-    position: fixed;
-    visibility: hidden;
-    top: 69px;
-    left: -100%;
-    width: 100%;
+  &__content {
+    width: 320px;
     height: 100%;
-    margin: 0;
-    padding: 20px 0 0 0;
-    list-style: none;
+    position: fixed;
+    top: 0;
+    @include flex($content: center, $items: center);
+    visibility: hidden;
+    right: -100%;
     background-color: $color-dark-3xl;
-    transition-duration: 0.25s;
+    @extend %transition;
   }
 
-  &__list.hamburger__toggle {
+  &__content.burger__toggle {
     visibility: visible;
-    left: 0;
+    right: 0;
+  }
+
+  &__btn.burger__toggle {
+    & > span {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    @include flex($direction: column, $items: center);
+    list-style: none;
   }
 
   &__item {
-    padding: 10px 0;
+    padding-top: 40px;
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   &__link {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 3.2rem;
     color: $color-dark-s;
+    text-decoration: none;
 
-    &:active {
+    &:hover,
+    &_active {
       color: $color-light-s;
     }
-  }
 
-  &__btn.hamburger__toggle {
-    & > span {
-      transform: rotate(45deg);
-    }
-
-    & > span::before {
-      top: 0;
-      transform: rotate(0);
-    }
-
-    & > span::after {
-      top: 0;
-      transform: rotate(90deg);
+    &_active {
+      padding-bottom: 4px;
+      border-bottom: 3px solid $color-primary;
     }
   }
 }
