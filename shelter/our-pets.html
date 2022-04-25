@@ -12,14 +12,32 @@
 
 <body>
   <header class="page-header inner">
+    <div class="overflow" id="nav-overflow"></div>
     <div class="wrapper page-header__wrapper">
       <a class="logo logo_inner" href="index.html">
         <h1 class="logo__title inner">Cozy House</h1>
         <span class="logo__subtitle inner">Shelter for pets in Boston</span>
       </a>
       <nav class="nav">
-        <div class="hamburger">
-          <div class="hamburger__btn inner"><span></span></div>
+        <div class="burger">
+          <div class="burger__btn inner"><span></span></div>
+
+          <div class="burger__content inner">
+            <ul class="burger__list">
+              <li class="burger__item">
+                <a class="burger__link inner" href="index.html#about">About the shelter</a>
+              </li>
+              <li class="burger__item">
+                <a class="burger__link burger__link_active inner" href="our-pets.html">Our pets</a>
+              </li>
+              <li class="burger__item">
+                <a class="burger__link inner" href="index.html#help">Help the shelter</a>
+              </li>
+              <li class="burger__item">
+                <a class="burger__link inner" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <ul class="nav__list">
@@ -45,78 +63,30 @@
 
       <h3 class="title_dark our-friends__title inner">Our friends who<br>are looking for a house</h3>
 
-      <div class="slider">
+      <div class="slider inner">
         <div class="slider__wrapper inner">
-          <div class="slider__list inner">
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-katrine.jpg" alt="Katrine">
-              <h4 class="slider__name">Katrine</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-jennifer.jpg" alt="Jennifer">
-              <h4 class="slider__name">Jennifer</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-woody.jpg" alt="Woody">
-              <h4 class="slider__name">Woody</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-sophia.jpg" alt="Sophia">
-              <h4 class="slider__name">Sophia</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-timmy.jpg" alt="Timmy">
-              <h4 class="slider__name">Timmy</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-charly.jpg" alt="Charly">
-              <h4 class="slider__name">Charly</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-scarlet.jpg" alt="Scarlett">
-              <h4 class="slider__name">Scarlett</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card inner">
-              <img class="slider__image" src="assets/images/pets/pets-freddie.jpg" alt="Freddie">
-              <h4 class="slider__name">Freddie</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
+          <div class="slider__carousel inner">
+            <div class="slider__item inner" id="item-left"></div>
+            <div class="slider__item inner" id="item-active"></div>
+            <div class="slider__item inner" id="item-right"></div>
           </div>
+        </div>
 
-          <div class="slider__control">
-            <button class="slider__prev button button_circle button_disabled inner">
-              <span class="ico ico_start"></span>
-            </button>
-            <button class="slider__prev button button_circle button_disabled inner">
-              <span class="ico ico_prev"></span>
-            </button>
-            <button class="button button_colored button_circle  button_disabled-colored inner">
-              1
-            </button>
-            <button class="slider__next button button_circle inner">
-              <span class="ico ico_next"></span>
-            </button>
-            <button class="slider__next button button_circle inner">
-              <span class="ico ico_finish"></span>
-            </button>
-          </div>
-
+        <div class="slider__control">
+          <button class="slider__start button button_circle button_disabled inner">
+            <span class="ico ico_start"></span>
+          </button>
+          <button class="slider__prev button button_circle button_disabled inner">
+            <span class="ico ico_prev"></span>
+          </button>
+          <button class="button button_colored button_circle  button_disabled-colored inner" id="page-number">
+          </button>
+          <button class="slider__next button button_circle inner">
+            <span class="ico ico_next"></span>
+          </button>
+          <button class="slider__finish button button_circle inner">
+            <span class="ico ico_finish"></span>
+          </button>
         </div>
       </div>
 
@@ -170,6 +140,19 @@
     </div>
   </footer>
 
+  <div class="overflow" id="modal-overflow">
+    <div class="modal">
+      <button class="modal__button button button_circle" id="modal__button">
+        <span class="ico ico_closed"></span>
+      </button>
+      <div class="modal__container"></div>
+    </div>
+  </div>
+
+  <script src="js/burger.js"></script>
+  <script src="js/data.js" type="module"></script>
+  <script src="js/classes.js" type="module"></script>
+  <script src="js/pagination.js" type="module"></script>
 </body>
 
 </html>

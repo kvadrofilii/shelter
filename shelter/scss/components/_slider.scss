@@ -11,6 +11,11 @@
     gap: 13px;
   }
 
+  &.inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
   &__wrapper {
     width: 100%;
     overflow: hidden;
@@ -36,18 +41,29 @@
     gap: 0 40px;
     flex-shrink: 0;
 
+    @include media-tablet {
+      height: 1365px;
+    }
+
     @include media-laptop {
+      height: 980px;
       gap: 90px;
       padding: 40px;
     }
 
     &.inner {
-      flex-wrap: wrap;
+      padding: 0;
+      @include grid($columns: 270px, $rows: 435px);
       gap: 30px;
 
       @include media-tablet {
-        justify-content: center;
+        grid-template-columns: 270px 270px;
         gap: 30px 40px;
+      }
+
+      @include media-laptop {
+        grid-template-columns: 270px 270px 270px 270px;
+        padding: 40px;
       }
     }
   }
@@ -117,7 +133,7 @@
     }
 
     @include media-laptop {
-      margin-top: 60px;
+      margin-top: 20px;
     }
   }
 }
