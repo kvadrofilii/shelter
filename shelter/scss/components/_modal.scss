@@ -36,6 +36,10 @@
     }
   }
 
+  &:hover .modal__button.button_circle {
+    background-color: transparent;
+  }
+
   &__image {
     display: none;
     border-radius: 9px 0 0 9px;
@@ -113,9 +117,8 @@
       color: $color-primary;
     }
   }
+}
 
-  &:hover .modal__button.button_circle {
-    border: 2px solid $color-primary-light;
-    background-color: transparent;
-  }
+#modal__button:hover {
+  background-color: $color-primary-light;
 }
