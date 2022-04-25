@@ -3,6 +3,12 @@
 
   &__wrapper {
     @include flex($direction: column, $content: center, $items: center);
+
+    &.inner {
+      @include media-laptop {
+        padding: 0;
+      }
+    }
   }
 
   &.inner {

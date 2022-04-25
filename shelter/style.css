@@ -347,7 +347,9 @@ template {
   display: none;
 }
 
-.burger__content, .overflow {
+.burger__btn > span,
+.burger__btn > span::before,
+.burger__btn > span::after, .burger__content, .overflow {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -1076,6 +1078,12 @@ h5 {
   gap: 0;
 }
 
+@media (min-width: 1280px) {
+  .our-friends__wrapper.inner {
+    padding: 0;
+  }
+}
+
 .our-friends.inner {
   padding: 42px 0 41px;
 }
@@ -1734,8 +1742,6 @@ h5 {
   width: 100%;
   height: 2px;
   background: #f1cdb3;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
 }
 
 .burger__btn > span::before {
