@@ -1,6 +1,6 @@
 .slider {
   width: 100%;
-  @include flex($content: center, $items: center, $wrap: wrap, $gap: 20px 80px);
+  @include flex($content: center, $items: center, $wrap: wrap, $gap: 0 80px);
 
   @include media-tablet {
     flex-wrap: nowrap;
@@ -31,13 +31,14 @@
   &__item {
     width: 100%;
     min-height: 435px;
-    padding: 40px;
+    padding: 20px;
     @include flex($content: center, $items: center);
-    gap: 40px;
+    gap: 0 40px;
     flex-shrink: 0;
 
     @include media-laptop {
       gap: 90px;
+      padding: 40px;
     }
 
     &.inner {

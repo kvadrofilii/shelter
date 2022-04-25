@@ -1078,11 +1078,17 @@ h5 {
 }
 
 .our-friends__title {
-  margin: 0 0 42px;
+  margin: 0 0 22px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
+  .our-friends__title {
+    margin: 0 0 40px;
+  }
+}
+
+@media (min-width: 1280px) {
   .our-friends__title {
     margin: 0 0 20px;
   }
@@ -1110,6 +1116,12 @@ h5 {
 
 @media (min-width: 768px) {
   .our-friends__button {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .our-friends__button {
     margin-top: 20px;
   }
 }
@@ -1131,7 +1143,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px 80px;
+  gap: 0 80px;
 }
 
 @media (min-width: 768px) {
@@ -1198,7 +1210,7 @@ h5 {
 .slider__item {
   width: 100%;
   min-height: 435px;
-  padding: 40px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1215,7 +1227,7 @@ h5 {
       -ms-flex-align: center;
           align-items: center;
   gap: 0;
-  gap: 40px;
+  gap: 0 40px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -1223,6 +1235,7 @@ h5 {
 @media (min-width: 1280px) {
   .slider__item {
     gap: 90px;
+    padding: 40px;
   }
 }
 

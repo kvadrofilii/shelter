@@ -18,10 +18,14 @@
   }
 
   &__title {
-    margin: 0 0 42px;
+    margin: 0 0 22px;
     text-align: center;
 
     @include media-tablet {
+      margin: 0 0 40px;
+    }
+
+    @include media-laptop {
       margin: 0 0 20px;
     }
 
@@ -42,6 +46,10 @@
     margin-top: 42px;
 
     @include media-tablet {
+      margin-top: 40px;
+    }
+
+    @include media-laptop {
       margin-top: 20px;
     }
   }
