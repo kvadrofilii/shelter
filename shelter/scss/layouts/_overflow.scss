@@ -7,6 +7,7 @@
   background: $color-overflow;
   display: none;
   cursor: pointer;
+  @extend %transition;
 
   &.show {
     @include flex($content: center, $items: center);
