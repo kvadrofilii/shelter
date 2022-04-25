@@ -1,6 +1,8 @@
 .logo {
   @include flex($direction: column, $items: center);
   text-decoration: none;
+  position: relative;
+  z-index: 60;
 
   &__title {
     margin: 0;
