@@ -26,7 +26,7 @@
       width: 100%;
       height: 2px;
       background: $color-primary;
-      transition-duration: 0.25s;
+      @extend %transition;
     }
 
     & > span::before {
