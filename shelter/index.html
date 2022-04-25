@@ -83,35 +83,19 @@
     <div class="wrapper our-friends__wrapper">
       <h3 class="title_dark our-friends__title">Our friends who<br>are looking for a house</h3>
 
-      <div class="slider">
+      <div class="slider" id="slider-main">
         <button class="slider__prev button button_circle">
           <span class="ico ico_arrow-prev"></span>
         </button>
 
         <div class="slider__wrapper">
-          <div class="slider__list">
-
-            <article class="slider__card">
-              <img class="slider__image" src="assets/images/pets/pets-katrine.jpg" alt="Katrine">
-              <h4 class="slider__name">Katrine</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card">
-              <img class="slider__image" src="assets/images/pets/pets-jennifer.jpg" alt="Jennifer">
-              <h4 class="slider__name">Jennifer</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
-            <article class="slider__card">
-              <img class="slider__image" src="assets/images/pets/pets-woody.jpg" alt="Woody">
-              <h4 class="slider__name">Woody</h4>
-              <button class="button slider__button">Learn more</button>
-            </article>
-
+          <div class="slider__carousel">
+            <div class="slider__item" id="item-left"></div>
+            <div class="slider__item" id="item-active"></div>
+            <div class="slider__item" id="item-right"></div>
           </div>
-
         </div>
+
         <button class="slider__next button button_circle">
           <span class="ico ico_arrow-next"></span>
         </button>
@@ -247,7 +231,7 @@
   </footer>
 
 
-  <div class="overflow">
+  <div class="overflow" id="modal-overflow">
     <div class="modal">
       <button class="modal__button button button_circle">
         <span class="ico ico_closed"></span>
@@ -256,6 +240,7 @@
     </div>
   </div>
   <script src="js/data.js" type="module"></script>
+  <script src="js/classes.js" type="module"></script>
   <script src="js/slider.js" type="module"></script>
 </body>
 
