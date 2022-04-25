@@ -13,6 +13,10 @@
   }
 
   &__wrapper {
-    @include flex($content: space-between, $items: center);
+    @include flex($content: flex-end, $items: center, $gap: 0 40px);
+
+    @include media-tablet {
+      justify-content: space-between;
+    }
   }
 }
